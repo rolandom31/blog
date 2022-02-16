@@ -1,0 +1,13 @@
+.header{
+    margin-top: 60px;
+}
+.headerTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+.headerImage{
+    width: 100%;
+    height: 60vh;
+}

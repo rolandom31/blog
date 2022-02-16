@@ -26,5 +26,6 @@ export default function TopBar() {
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
+  
   )
 }
