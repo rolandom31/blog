@@ -8,6 +8,7 @@
     align-items: center;
     font-family: 'Prompt', sans-serif;
     color: white;
+    z-index: 9999;
 }
 
 .topLeft, .topRight{
