@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    position: sticky;
 }
 .sidebarItem{
     display: flex;
@@ -21,14 +22,14 @@
     width: 80%;
     border-top: 3px solid #A6469F;
     border-bottom: 3px solid #A6469F;
-    font-family: 'Rajdhani';
+    font-family: 'Rajdhani',sans-serif;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
 }
 .sidebarItem > p{
     margin: 30px;
-    font-family: 'Duru Sans';
+    font-family: 'Duru Sans', sans-serif;
     font-size: 14px;
     text-align: center;
 }
@@ -47,7 +48,7 @@
     width: 50%;
     margin-top: 10%;
     cursor: pointer;
-    font-family: 'Duru Sans';
+    font-family: 'Duru Sans',sans-serif;
 }
 .sidebarSocial{
     margin-top: 15px;

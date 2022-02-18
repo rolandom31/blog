@@ -27,6 +27,7 @@
     font-weight: 600;
     font-size: 24px;
     color: #5E7EBF;
+    cursor: pointer;
 }
 .postTitle:hover{
     color: #F29F05;
