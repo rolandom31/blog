@@ -1,4 +1,4 @@
-.register{
+.login{
     height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
@@ -7,13 +7,13 @@
     background: linear-gradient(0deg, rgba(242,159,5,1) 0%, rgba(242,116,5,1) 100%);
     align-items: center;
 }
-.registerTitle{
+.loginTitle{
     font-size: 50px;
     font-family: 'Prompt', sans-serif;
     color: var(--greyish);
 
 }
-.registerForm{
+.loginForm{
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -22,20 +22,20 @@
     box-shadow:  -35px -35px 70px #ce8704,
              35px 35px 70px #ffb706;
 }
-.registerForm>label{
+.loginForm>label{
     margin: 10px;
     color: var(--greyish);
     font-family: 'Rajdhani', sans-serif;
     text-align: center;
     font-size: 20px;
 }
-.registerInput{
+.loginInput{
     padding: 10px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     text-align: center;
 }
-.registerButton{
+.loginButton{
     margin-top: 20px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
@@ -45,10 +45,10 @@
     font-size: 25px;
     padding: 10px;
 }
-.registerButton:hover{
+.loginButton:hover{
     color: var(--greyish);
 }
-.registerLoginBtn{
+.loginRegisterBtn{
     margin-top: 20px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
@@ -57,6 +57,6 @@
     font-family: 'Rajdhani', sans-serif;
     font-size: 25px;
 }
-.registerLoginBtn:hover{
+.loginRegisterBtn:hover{
     color: var(--greyish);
 }
