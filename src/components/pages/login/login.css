@@ -1,0 +1,62 @@
+.login{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(242,159,5);
+    background: linear-gradient(0deg, rgba(242,159,5,1) 0%, rgba(242,116,5,1) 100%);
+    align-items: center;
+}
+.loginTitle{
+    font-size: 50px;
+    font-family: 'Prompt', sans-serif;
+    color: var(--greyish);
+
+}
+.loginForm{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 26px;
+    background: linear-gradient(315deg, #da8f05, #ffaa05);
+    box-shadow:  -35px -35px 70px #ce8704,
+             35px 35px 70px #ffb706;
+}
+.loginForm>label{
+    margin: 10px;
+    color: var(--greyish);
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+.loginInput{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: center;
+}
+.loginButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: var(--purple);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 25px;
+    padding: 10px;
+}
+.loginButton:hover{
+    color: var(--greyish);
+}
+.loginRegisterBtn{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: var(--purple);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 25px;
+}
+.loginRegisterBtn:hover{
+    color: var(--greyish);
+}
