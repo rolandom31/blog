@@ -34,7 +34,7 @@ const handleSubmit = async (e)=>{
 
             <label>Password</label>
             <input type="password" className="loginInput" placeholder="Enter your password" ref={passwordRef} />
-            <button className="loginButton" type="submit" >Login</button>
+            <button className="loginButton" type="submit"disabled={isFetching} >Login</button>
             <button className="loginRegisterBtn">
               <Link to="/register">or Sign up</Link>
             </button>
