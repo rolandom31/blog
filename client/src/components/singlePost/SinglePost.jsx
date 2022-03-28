@@ -3,11 +3,15 @@ import { useEffect } from "react";
 import "./singlePost.css";
 import axios from "axios";
 import { useState } from "react";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 export default function SinglePost() {
     const location = useLocation();
     const path = (location.pathname.split("/")[2]);
-    const [post, setPost] = useState({})
+    const [post, setPost] = useState({});
+    const PF = "http://localhost:5003/images/";
+    const {user} = useContext(Context);
     
 
     useEffect(()=>{
@@ -17,6 +21,15 @@ export default function SinglePost() {
         };
         getPost()
     },[path]);
+
+    const handleDelete = async()=>{
+        try {
+            await axios.delete("/posts/" + path, {data:{username:user.username}});
+            window.location.replace("/");
+        } catch (err) {
+            
+        }
+    };
   return (
     <div className='singlePost'>
         <div className="postContent">
@@ -25,13 +38,16 @@ export default function SinglePost() {
                 <h1 className="singlePostTitle">
                     {post.title}                    
                 </h1>
+
                 <div className="singlePostInfo">
+                    {post.username === user?.username &&(
                     <div className="singlePostEdit">
                         <i className="singlePostIcon fa-solid fa-pencil"></i>
-                        <i className="singlePostIcon fa-solid fa-trash"></i>
+                        <i className="singlePostIcon fa-solid fa-trash" onClick={handleDelete}></i>
                     </div>
+                    )}
                     {post.photo &&
-                    <img className="singlePostImage" src={post.photo} alt="" />
+                    <img className="singlePostImage" src={PF + post.photo} alt="" />
                     }
                     
                     <span className="singlePostAuthor">
