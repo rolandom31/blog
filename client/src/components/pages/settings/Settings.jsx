@@ -1,7 +1,11 @@
+import { useContext } from "react"
+import { useRef } from "react/cjs/react.production.min"
+import { Context } from "../../../context/Context"
 import Sidebar from "../../sidebar/Sidebar"
 import "./settings.css"
 
 export default function Settings() {
+    const {user} = useContext(Context);
   return (
     <div className="settings">
         <div className="settingsWrapper">
@@ -13,7 +17,7 @@ export default function Settings() {
                 <label>Profile Picture</label>
                 <div className="settingsPP">
                     <img className="settingsImg" 
-                    src="https://unsplash.it/id/0/1080/720" alt="" />
+                    src={user.profilePic} alt="" />
                     <label htmlFor="fileInput">
                      <i className="settingsPPIcon far fa-user-circle"></i>
                     </label>
