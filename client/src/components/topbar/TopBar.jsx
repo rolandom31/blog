@@ -6,6 +6,7 @@ import "./topbar.css"
 
 export default function TopBar() {
   const {user, dispatch} = useContext(Context);
+  const PF= "http://localhost:5003/images";
 
   const handleLogout =  ()=>{
     dispatch({type:"LOGOUT"});
@@ -42,7 +43,7 @@ export default function TopBar() {
             <Link to="settings">
              <img 
               className="topImage"
-              src={user.profilePic} alt="" />
+              src={PF+user.profilePic} alt="" />
             </Link>
              
           ) :(

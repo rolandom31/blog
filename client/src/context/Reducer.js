@@ -1,6 +1,6 @@
 const Reducer = (state,action)=>{
     switch (action.type){
-        case "LOGIN_START" :
+            case "LOGIN_START" :
             return{
                 user:null,
                 isFetching:true,
@@ -19,6 +19,26 @@ const Reducer = (state,action)=>{
                     isFetching:false,
                     error:true,
             };
+
+            case "UPDATE_START" :
+            return{
+                ...state,
+                isFetching:true,
+            };
+
+            case "UPDATE_SUCCESS" :
+            return{
+                user:action.payload,
+                isFetching:false,
+                error:false,
+            };
+            case "UPDATE_FAILURE" :
+                return{
+                    user:state.user,
+                    isFetching:false,
+                    error:true,
+            };
+
             case "LOGOUT" :
                 return{
                     user:null,
