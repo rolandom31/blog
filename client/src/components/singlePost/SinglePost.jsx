@@ -27,20 +27,19 @@ export default function SinglePost() {
         getPost()
     },[path]);
 
-    const handleDelete = async()=>{
+    const handleDelete = async () => {
         try {
-            await axios.delete("/posts/" + path, {data:{username:user.username}});
-            window.location.replace("/");
-        } catch (err) {
-            
-        }
-    };
+          await axios.delete(`/posts/${post._id}`, {
+            data: { username: user.username },
+          });
+          window.location.replace("/");
+        } catch (err) {}
+      };
 
     const handleUpdate = async ()=>{
         try {
             await axios.put(`/posts/${post._id}`, 
             {username:user.username, title, desc,});
-            //window.location.reload();
             setUpdateMode(false);
         } catch (err) {
             
@@ -102,3 +101,5 @@ export default function SinglePost() {
     </div>
   )
 }
+
+  

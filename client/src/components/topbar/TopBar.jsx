@@ -4,6 +4,7 @@ import { Context } from "../../context/Context";
 import "./topbar.css"
 
 
+
 export default function TopBar() {
   const {user, dispatch} = useContext(Context);
   const PF= "http://localhost:5003/images";
@@ -43,7 +44,7 @@ export default function TopBar() {
             <Link to="settings">
              <img 
               className="topImage"
-              src={PF+user.profilePic} alt="" />
+              src="https://unsplash.it/id/0/1080/720" alt="" />
             </Link>
              
           ) :(
