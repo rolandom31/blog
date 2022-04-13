@@ -15,10 +15,10 @@ export default function TopBar() {
   return (
     <div className='top'>
         <div className="topLeft">
-            <i className="topIcon fa-brands fa-instagram"></i> 
-            <i className="topIcon fa-brands fa-linkedin-in"></i>
-            <i className="topIcon fa-brands fa-spotify"></i>
-            <i className="topIcon fa-brands fa-github-alt"></i> 
+        <a className="topIcon" href="https://instagram.com/rolaquils"> <i className=" fa-brands fa-instagram"></i> </a>
+        <a className="topIcon" href="https://www.linkedin.com/in/rolandom31"> <i className="fa-brands fa-linkedin-in"></i></a>
+        <a className="topIcon" href="https://open.spotify.com/user/1283286273?si=97e8bc30ae1e475c">  <i className=" fa-brands fa-spotify"></i></a>
+        <a className="topIcon" href="https://github.com/rolandom31"> <i className=" fa-brands fa-github-alt"></i> </a>
         </div>
         <div className="topCenter">
             <ul className="topList">

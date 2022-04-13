@@ -5,7 +5,7 @@ import Sidebar from '../../sidebar/Sidebar'
 import { useEffect, useState } from "react";
 import axios, { Axios } from "axios"
 import { useLocation } from 'react-router-dom';
-
+import { motion } from "framer-motion"
 
 export default function Home() {
   const [posts,setPosts] = useState([]);

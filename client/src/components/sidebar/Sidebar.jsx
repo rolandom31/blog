@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import "./sidebar.css"
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion"
 
 export default function Sidebar() {
     const [cats, setCats] = useState([]);
@@ -18,7 +19,7 @@ export default function Sidebar() {
     <div className="sidebar">
         <div className="sidebarItem">
             <span className="sidebarTitle">About Me</span>
-            <img className="sidebarImage" src={'/images/rolaquils-web.png'} alt="" />
+            <motion.img className="sidebarImage" src={'/images/rolaquils-web.png'} alt="" />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
             </p>
@@ -28,7 +29,7 @@ export default function Sidebar() {
             <ul className="sidebarList">
                 {cats.map((c)=>(
                     <Link to= {`/?cat=${c.name}`} className="link">
-                     <li className="sidebarListItem">{c.name}</li>
+                     <motion.li className="sidebarListItem"whileHover={{ scale: 1.1 }}>{c.name}</motion.li>
                     </Link>
                    
                 ))}
@@ -36,12 +37,12 @@ export default function Sidebar() {
         </div>
         <div className="sidebarItem">
             <span className="sidebarTitle">Follow me!</span>
-            <div className="sidebarSocial">
-                <i className="sidebarIcon fa-brands fa-instagram"></i> 
-                <i className="sidebarIcon fa-brands fa-linkedin-in"></i>
-                <i className="sidebarIcon fa-brands fa-spotify"></i>
-                <i className="sidebarIcon fa-brands fa-github-alt"></i> 
-            </div>
+            <motion.div className="sidebarSocial">
+                <a className="sidebarIcon" href="https://instagram.com/rolaquils"><motion.i className=" fa-brands fa-instagram"whileHover={{ scale: 1.1 }}></motion.i> </a>
+                <a className="sidebarIcon" href="https://www.linkedin.com/in/rolandom31"><motion.i className=" fa-brands fa-linkedin-in"whileHover={{ scale: 1.1 }}></motion.i></a>
+                <a className="sidebarIcon" href="https://open.spotify.com/user/1283286273?si=97e8bc30ae1e475c"><motion.i className=" fa-brands fa-spotify"whileHover={{ scale: 1.1 }}></motion.i></a>
+                <a className="sidebarIcon" href="https://github.com/rolandom31"><motion.i className="fa-brands fa-github-alt"whileHover={{ scale: 1.1 }}></motion.i> </a>
+            </motion.div>
         </div>
     </div>
   )
