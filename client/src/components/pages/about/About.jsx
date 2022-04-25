@@ -11,9 +11,6 @@ export default function About() {
     <div className='about'>
         <div className="aboutwrapper">
             <div className='titleLg'>Who Am I?</div>
-
-                
-                
                 <div className='aboutText'>
                 <img src="./images/me-b&n.jpeg" alt="" className='imgAbout'/>
                     My name is Rolando Mata, im a Software Engineer graduted on 2020 (yes, mid pandemic) from Tec de Monterrey,
@@ -25,8 +22,6 @@ export default function About() {
                     In my spare time, I also volunteer as IT support at Postdata, a digital "women-powered" newspaper focused on local news of Monterrey.
                     You can also find my portfolio at <a href='https://www.rmata.dev'>this link</a>
                 </div>
-                
-                
         </div>
         <Sidebar/>
     </div>
