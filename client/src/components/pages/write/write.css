@@ -31,7 +31,9 @@ position: relative;
     outline: none;
 }
 .writeText{
-    font-size: 20px;
+    font-size: 30px;
+    white-space: pre-wrap;
+    display: block;
 }
 
 .writeSubmit{

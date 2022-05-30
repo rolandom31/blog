@@ -67,6 +67,7 @@ font-size: 28px;
     color: black;
     line-height: 25px;
     margin-top: 55px;
+    white-space: pre-wrap;
 }
 .singlePostContent::first-letter{
     margin-left: 30px;

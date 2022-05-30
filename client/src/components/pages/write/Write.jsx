@@ -3,6 +3,11 @@ import "./write.css"
 import axios from "axios"
 import { useContext } from "react";
 import { Context } from "../../../context/Context";
+import {Editor} from "../../editor/Editor";
+import ReactDOM from 'react-router-dom';
+
+
+
 
 export default function Write() {
   const [title, setTitle] = useState("");
@@ -17,6 +22,8 @@ export default function Write() {
       title, 
       desc,
     }
+
+    console.log(newPost)
     if(file){
       const data = new FormData();
       const filename = Date.now() + file.name;
@@ -31,6 +38,7 @@ export default function Write() {
     }
     try {
       const res = await axios.post("/posts", newPost);
+      console.log(res)
       window.location.replace("/post/"+ res.data._id);
     } catch (err) {
       
@@ -39,6 +47,7 @@ export default function Write() {
   }
 
   return (
+    
     <div className="write">
       {file &&
       <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
@@ -54,11 +63,13 @@ export default function Write() {
                  className="writeInput" autoFocus={true} onChange={e=>setTitle(e.target.value)}/>
             </div>
             <div className="writeFormGroup">
-                <textarea placeholder="Whats on your mind?..." type="text"
-                className="writeInput writeText"onChange={e=>setDesc(e.target.value)}></textarea>
+                <textarea name="myTextarea" id="text-editor" placeholder="Whats on your mind?..." type="paragraph"
+                className="writeInput writeText"onChange={e=>setDesc(e.target.value)} ></textarea>
+                {/* <Editor type="text" className="writeInput writeText"onChange={e=>setDesc(e.target.value)}/> */}
             </div>
             <button className="writeSubmit" type="submit">Publish</button>
         </form>
     </div>
   )
 }
+
