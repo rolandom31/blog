@@ -46,6 +46,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    font-weight: 100;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }

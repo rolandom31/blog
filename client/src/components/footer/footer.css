@@ -1,0 +1,10 @@
+.lowBar{
+    background-color: var(--orange);
+    color: var(--white);
+}
+.nameBar{
+    color: var(--purple);
+}
+.nameBar:hover{
+    color: var(--white)
+}

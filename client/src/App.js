@@ -7,6 +7,7 @@ import Login from './components/pages/login/Login';
 import Register from './components/pages/register/Register';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
+import Footer from './components/footer/Footer';
 import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 import { useContext } from 'react';
 import { Context } from './context/Context';
@@ -26,6 +27,7 @@ function App(){
             <Route path="/about" element = {<About/>}/>
             <Route path="/contact" element = {<Contact/>}/>
             </Routes>
+            <Footer/>
         </Router>
     );
 }

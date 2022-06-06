@@ -88,8 +88,8 @@ export default function SinglePost() {
                 {updateMode?(
                 <textarea className="singlePostContentInput" value={desc} onChange={(e)=>setDesc(e.target.value)}/>
                 ):(
-                    <p className="singlePostContent">
-                   {desc}
+                    <p className="singlePostContent"dangerouslySetInnerHTML={{__html: desc}}>
+                   {/*post.desc*/}
                     </p>
                 )}
                 {updateMode && (

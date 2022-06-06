@@ -1,4 +1,7 @@
 .home{
     display: flex;
     background-color: #F2F2F2;
+   /* min-height: 400px;
+   margin-bottom: 200px;
+   clear: both;*/
 }
