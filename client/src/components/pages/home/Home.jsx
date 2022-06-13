@@ -10,7 +10,6 @@ import { motion } from "framer-motion"
 export default function Home() {
   const [posts,setPosts] = useState([]);
   const {search} = useLocation();
-  const [query, setQuery] = useState("")
 
   useEffect(()=>{
     const fetchPosts = async () => {

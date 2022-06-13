@@ -9,6 +9,8 @@
     align-items: center;
     border-radius: 10px;
     position: sticky;
+    max-width: 20%;
+    min-width: 20%;
 }
 .sidebarItem{
     display: flex;
@@ -58,7 +60,7 @@
     justify-content: center;
 }
 .sidebarIcon{
-    margin: 10%;
+    margin: 3%;
     cursor: pointer;
     font-size: 38px;
     color: #A6469F;
